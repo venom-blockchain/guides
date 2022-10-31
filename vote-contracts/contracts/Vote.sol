@@ -12,6 +12,8 @@ contract Vote {
     uint32  _acceptedCount;
     uint32  _rejectedCount;
 
+    event NewBallot(address ballotAddress, address owner);
+
     constructor(
         uint256 managerPublicKey,
         address sendRemainingGasTo
@@ -33,13 +35,15 @@ contract Vote {
             },
             code: _ballotCode
         });
-        new Ballot{
+        
+        address ballot = new Ballot{
             stateInit: ballotStateInit,
             value: 0,
             flag: 128
         }(
             sendRemainingGasTo
-        ); 
+        );
+        emit NewBallot(ballot, owner);
     }
 
     // this function will be called by ballots, but how we can know - is calling ballot a fake or not?

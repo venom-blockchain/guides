@@ -7,10 +7,10 @@ async function main() {
     publicKey: signer.publicKey,
     initParams: {
       _nonce: locklift.utils.getRandomNonce(),
-      _ballotCode: (await locklift.factory.getContractArtifacts("Vote")).code
+      _ballotCode: (await locklift.factory.getContractArtifacts("Ballot")).code
     },
     constructorParams: {
-      managerPublicKey: signer.publicKey,
+      managerPublicKey: `0x${signer.publicKey}`,
       sendRemainingGasTo: new Address("0:ece57bcc6c530283becbbd8a3b24d3c5987cdddc3c8b7b33be6e4a6312490415")
     },
     value: locklift.utils.toNano(3),
