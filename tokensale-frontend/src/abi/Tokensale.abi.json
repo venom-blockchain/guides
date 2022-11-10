@@ -1,0 +1,83 @@
+{
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"distributedTokenRoot","type":"address"},
+				{"name":"supply","type":"uint256"},
+				{"name":"rate","type":"uint128"},
+				{"name":"sendRemainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onTokenWallet",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buyTokens",
+			"inputs": [
+				{"name":"deposit","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "_distributedTokenRoot",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_distributedTokenRoot","type":"address"}
+			]
+		},
+		{
+			"name": "_distributedTokenWallet",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_distributedTokenWallet","type":"address"}
+			]
+		},
+		{
+			"name": "_supply",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_supply","type":"uint256"}
+			]
+		},
+		{
+			"name": "_rate",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_rate","type":"uint128"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_nonce","type":"uint16"},
+		{"key":2,"name":"_owner","type":"address"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_nonce","type":"uint16"},
+		{"name":"_owner","type":"address"},
+		{"name":"_distributedTokenRoot","type":"address"},
+		{"name":"_distributedTokenWallet","type":"address"},
+		{"name":"_supply","type":"uint256"},
+		{"name":"_rate","type":"uint128"}
+	]
+}
