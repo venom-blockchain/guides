@@ -1,0 +1,48 @@
+export const abi = {
+	"ABI version": 2,
+	"version": "2.2",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"sendRemainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "activate",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "vote",
+			"inputs": [
+				{"name":"sendRemainingGasTo","type":"address"},
+				{"name":"accept","type":"bool"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"_vote","type":"address"},
+		{"key":2,"name":"_managerPublicKey","type":"uint256"},
+		{"key":3,"name":"_owner","type":"address"}
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"_vote","type":"address"},
+		{"name":"_managerPublicKey","type":"uint256"},
+		{"name":"_owner","type":"address"},
+		{"name":"_activated","type":"bool"},
+		{"name":"_used","type":"bool"}
+	]
+} as const
