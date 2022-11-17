@@ -336,3 +336,13 @@ header .logout:hover {
 .lots__item img {
   width: 100%;
 }
+.add {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  transition: border 0.3s ease;
+}
+
+.add img {
+  margin: 0;
+}
