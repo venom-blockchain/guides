@@ -61,6 +61,8 @@ describe("Test Sample contract", async function () {
       initParams: {},
       constructorParams: {
           codeNft: (await locklift.factory.getContractArtifacts("NFT")).code,
+          codeIndex: (await locklift.factory.getContractArtifacts("Index")).code,
+          codeIndexBasis: (await locklift.factory.getContractArtifacts("IndexBasis")).code,
           json: `{"collection":"tutorial"}`
       },
       value: locklift.utils.toNano(5),

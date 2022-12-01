@@ -9,9 +9,41 @@
 				{"name":"owner","type":"address"},
 				{"name":"sendGasTo","type":"address"},
 				{"name":"remainOnNft","type":"uint128"},
-				{"name":"json","type":"string"}
+				{"name":"json","type":"string"},
+				{"name":"codeIndex","type":"cell"},
+				{"name":"indexDeployValue","type":"uint128"},
+				{"name":"indexDestroyValue","type":"uint128"}
 			],
 			"outputs": [
+			]
+		},
+		{
+			"name": "indexCode",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"code","type":"cell"}
+			]
+		},
+		{
+			"name": "indexCodeHash",
+			"inputs": [
+				{"name":"answerId","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"hash","type":"uint256"}
+			]
+		},
+		{
+			"name": "resolveIndex",
+			"inputs": [
+				{"name":"answerId","type":"uint32"},
+				{"name":"collection","type":"address"},
+				{"name":"owner","type":"address"}
+			],
+			"outputs": [
+				{"name":"index","type":"address"}
 			]
 		},
 		{
@@ -130,6 +162,9 @@
 		{"name":"_collection","type":"address"},
 		{"name":"_owner","type":"address"},
 		{"name":"_manager","type":"address"},
-		{"name":"_json","type":"string"}
+		{"name":"_json","type":"string"},
+		{"name":"_indexDeployValue","type":"uint128"},
+		{"name":"_indexDestroyValue","type":"uint128"},
+		{"name":"_codeIndex","type":"cell"}
 	]
 }

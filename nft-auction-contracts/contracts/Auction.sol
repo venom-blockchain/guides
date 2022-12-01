@@ -176,7 +176,7 @@ contract Auction is INftTransfer, IAcceptTokensTransferCallback {
             mapping(address => ITIP4_1NFT.CallbackParams) noCallbacks;
             TvmCell empty;
             ITIP4_1NFT(_nft).transfer{
-                value: 0.1 ever,
+                value: 1 ever,
                 flag: 1,
                 bounce: false
             }(

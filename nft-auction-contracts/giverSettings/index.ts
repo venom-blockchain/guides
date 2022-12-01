@@ -85,6 +85,7 @@ export class GiverWallet implements Giver {
 
 const giverWallet = {
   "ABI version": 2,
+  "version": "2.3",
   header: ["pubkey", "time", "expire"],
   functions: [
     {
