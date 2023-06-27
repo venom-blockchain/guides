@@ -1,6 +1,5 @@
 import { LockliftConfig } from "locklift";
 import { FactorySource } from "./build/factorySource";
-import { SimpleGiver, GiverWallet } from "./giverSettings";
 
 declare global {
   const locklift: import("locklift").Locklift<FactorySource>;
@@ -14,11 +13,11 @@ const config: LockliftConfig = {
     // path: "/mnt/o/projects/broxus/TON-Solidity-Compiler/build/solc/solc",
 
     // Or specify version of compiler
-    version: "0.62.0",
+    version: "0.61.2",
 
     // Specify config for extarnal contracts as in exapmple
     externalContracts: {
-      "node_modules/tip3/build": ['TokenRoot', 'TokenWallet'],
+      "node_modules/@broxus/tip3/build": ['TokenRoot', 'TokenWallet'],
       "precompiled": ['Index', 'IndexBasis']
     }
   },
@@ -47,7 +46,6 @@ const config: LockliftConfig = {
       // This giver is default local-node giverV2
       giver: {
         // Check if you need provide custom giver
-        giverFactory: (ever, keyPair, address) => new SimpleGiver(ever, keyPair, address),
         address: "0:ece57bcc6c530283becbbd8a3b24d3c5987cdddc3c8b7b33be6e4a6312490415",
         key: "172af540e43a524763dd53b26a066d472a97c4de37d5498170564510608250c3",
       },
@@ -63,11 +61,10 @@ const config: LockliftConfig = {
     },
     mainnet: {
       // Specify connection settings for https://github.com/broxus/everscale-standalone-client/
-      connection: "mainnet",
+      connection: "mainnetJrpc",
       // This giver is default Wallet
       giver: {
         // Check if you need provide custom giver
-        giverFactory: (ever, keyPair, address) => new GiverWallet(ever, keyPair, address),
         address: "0:ece57bcc6c530283becbbd8a3b24d3c5987cdddc3c8b7b33be6e4a6312490415",
         key: "172af540e43a524763dd53b26a066d472a97c4de37d5498170564510608250c3",
       },

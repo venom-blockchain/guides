@@ -6,15 +6,15 @@ pragma AbiHeader pubkey;
 
 // Interfaces we needs
 // This interface for transferring NFT to winner
-import "@itgold/everscale-tip/contracts/TIP4_1/interfaces/ITIP4_1NFT.sol";
+import "@broxus/tip4/contracts/TIP4_1/interfaces/ITIP4_1NFT.tsol";
 // This interface to accept NFT from owner
-import "@itgold/everscale-tip/contracts/TIP4_1/interfaces/INftTransfer.sol";
+import "@broxus/tip4/contracts/TIP4_1/interfaces/INftTransfer.tsol";
 // This interface for implementing tip-3 tokens receiving callback
-import "tip3/contracts/interfaces/IAcceptTokensTransferCallback.sol";
+import "@broxus/tip3/contracts/interfaces/IAcceptTokensTransferCallback.tsol";
 // This interface for deploying TokenWallet
-import "tip3/contracts/interfaces/ITokenRoot.sol";
+import "@broxus/tip3/contracts/interfaces/ITokenRoot.tsol";
 // This interface to return lower bids
-import "tip3/contracts/interfaces/ITokenWallet.sol";
+import "@broxus/tip3/contracts/interfaces/ITokenWallet.tsol";
 
 
 contract Auction is INftTransfer, IAcceptTokensTransferCallback {
