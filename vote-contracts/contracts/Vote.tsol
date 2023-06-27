@@ -2,7 +2,7 @@ pragma ever-solidity >= 0.61.2;
 pragma AbiHeader expire;
 pragma AbiHeader pubkey;
 
-import "./Ballot.sol";
+import "./Ballot.tsol";
 
 contract Vote {
     uint16  static _nonce;
